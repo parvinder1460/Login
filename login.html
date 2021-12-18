@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <script src="javascript.js"></script> -->
+</head>
+<body>
+
+    <script>
+        function validate(){
+            var fg=1;
+            var vl=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            var vlp=/^[A-Z0-9]/;
+            var user=document.getElementById("username");
+            var pass=document.getElementById("password");
+      //  alert('user= '+user.value+' pwd= '+pass.value);
+      
+       if (user.value.match(vl))
+       {
+           console.log('7777777777777');
+           alert('correct');
+           fg=0;
+       }
+       else
+       {
+           alert("enter valid email");
+           fg=1;
+       }
+    
+       if (!pass.value.match(vlp)){
+        alert("Paswword should contains atleast one uppercase and digit");
+           fg=1;
+           
+       }
+    else{
+        alert('pass ='+pass.value+' password validate');
+           fg=0;
+       }
+      
+    
+     if (fg == 1 )
+     {
+         return false;
+     }
+     else{
+         return true;
+     }
+    
+     }
+        
+       // var user = document.querySelector('#user');
+       
+    </script>
+    <form  onsubmit="return validate()" action="data.html" >
+        <!-- <form  onsubmit=" validate()"  >  -->
+    <div class="logo">
+    <div class="center">
+        <img width="400" height="135" src="smartserve.JPG">
+        <form method="post" onsubmit="return validate()" action=# id="form">
+            <div class="txt_field">
+                <input type="text" required name="" placeholder="Username" id="username" value="">
+                <small></small>
+            </div>
+            <div class="txt_field">
+                <input type="password" required placeholder="Password" id="password">
+                <small></small>
+            </div>
+            <input type="submit" value="Login" class="login">
+          <div class="pass"><u>Forgot your password?</u></div>
+        </form>
+      </div>
+    </div>
+</form>
+</body>
+</html>
+
+<!-- RGB (20,20,20) -->
